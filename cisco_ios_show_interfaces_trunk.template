@@ -1,0 +1,9 @@
+Value Required IFACE (\w+\d+\/\S+)
+Value Required VLAN_LIST (\d+.*)
+
+Start
+  ^Port\s+Vlans allowed on trunk
+  ^${IFACE}\s+${VLAN_LIST} -> Record
+  ^Port\s+Vlans allowed and active in management domain -> Extra
+
+Extra
